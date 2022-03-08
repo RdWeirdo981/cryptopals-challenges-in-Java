@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-import org.apache.commons.codec.binary.Hex;
 
 public class FixedXOR {
     public static void main(String[] args) {
@@ -13,18 +12,8 @@ public class FixedXOR {
         sc.close();
         
         // convert to byte
-        try {
-            byte[] byteStr1 = Hex.decodeHex(scanArrayList.get(0));
-            byte[] byteStr2 = Hex.decodeHex(scanArrayList.get(1));
-            byte[] outputByte = new byte[byteStr1.length];
-            for (int i = 0; i < byteStr1.length; i++){
-                outputByte[i] = (byte) (byteStr1[i] ^ byteStr2[i]);
-            }
-            String outputString = Hex.encodeHexString(outputByte);
-            System.out.printf("The output string is: %s", outputString);
-        } catch (Exception e) {
-            System.out.println("Exception occurs!");
-        }
+        String result = ConvertClass.getTwoFixedStringXOR(scanArrayList.get(0), scanArrayList.get(1));
+        System.out.printf("Result: %s", result);
         
     }
 }
