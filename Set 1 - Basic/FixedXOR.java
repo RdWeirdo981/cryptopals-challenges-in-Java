@@ -12,7 +12,7 @@ public class FixedXOR {
         sc.close();
         
         // convert to byte
-        String result = ConvertClass.getTwoFixedStringXOR(scanArrayList.get(0), scanArrayList.get(1));
+        String result = GeneralMethods.getTwoFixedStringXOR(scanArrayList.get(0), scanArrayList.get(1));
         System.out.printf("Result: %s", result);
         
     }

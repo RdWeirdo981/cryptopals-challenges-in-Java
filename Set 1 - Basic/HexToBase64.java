@@ -8,7 +8,7 @@ public class HexToBase64 {
         String hexString = sc.nextLine();
         sc.close();
 
-        String result = ConvertClass.getHexToBase64(hexString);
+        String result = GeneralMethods.getHexToBase64(hexString);
         System.out.printf("Result: %s\n", result);
 
     }//End of main
